@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adachukwu Okafor - Virtual Assistant & Data Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'milk': '#F8F6F0',
+                        'warm-brown': '#8B4513',
+                        'burnt-orange': '#CC5500',
+                        'coffee': '#6F4E37',
+                        'cream': '#FFFDD0'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+
+        .custom-project-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #6F4E37 50%, #CC5500 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #CC5500;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #CC5500; }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-20px); }
+            100% { transform: translatey(0px); }
+        }
+    </style>
+</head>
+<body class="bg-milk text-gray-800">
+     <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-milk">
+                    Adachukwu <span class="text-burnt-orange">Okafor</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-milk hover:text-burnt-orange transition-colors">Home</a>
+                    <a href="#about" class="text-milk hover:text-burnt-orange transition-colors">About</a>
+                    <a href="#services" class="text-milk hover:text-burnt-orange transition-colors">Services</a>
+                    <a href="#custom-projects-section" class="text-milk hover:text-burnt-orange transition-colors">Projects</a>
+                    <a href="#portfolio" class="text-milk hover:text-burnt-orange transition-colors">Portfolio</a>
+                    <a href="#contact" class="text-milk hover:text-burnt-orange transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-milk" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 px-4 py-4">
+            <a href="#home" class="block text-milk hover:text-burnt-orange py-2">Home</a>
+            <a href="#about" class="block text-milk hover:text-burnt-orange py-2">About</a>
+            <a href="#services" class="block text-milk hover:text-burnt-orange py-2">Services</a>
+            <a href="#custom-projects-section" class="block text-milk hover:text-burnt-orange py-2">projects</a>
+            <a href="#portfolio" class="block text-milk hover:text-burnt-orange py-2">Portfolio</a>
+            <a href="#contact" class="block text-milk hover:text-burnt-orange py-2">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   <!-- Hero Section -->
+<section id="home" class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <div class="floating absolute top-20 left-10 w-20 h-20 bg-burnt-orange rounded-full"></div>
+    <div class="floating absolute top-40 right-20 w-16 h-16 bg-warm-brown rounded-full" style="animation-delay: -2s;"></div>
+    <div class="floating absolute bottom-20 left-1/4 w-12 h-12 bg-milk rounded-full" style="animation-delay: -4s;"></div>
+  </div>
+
+  <!-- Main content container -->
+  <div class="z-10 px-4 flex flex-col items-center text-center">
+    <!-- Profile Image -->
+    <div class="w-64 h-64 rounded-full bg-gradient-to-br from-burnt-orange to-warm-brown p-1 mb-6">
+      <div class="w-full h-full rounded-full overflow-hidden bg-milk">
+        <img src="./image/profilephoto.jpg" alt="Adachukwu Okafor" class="w-full h-full object-contain rounded-full">
+      </div>
+    </div>
+
+    <!-- Headings and Text -->
+    <h1 class="text-5xl md:text-7xl font-bold text-milk mb-4">
+      Adachukwu <span class="text-burnt-orange">Okafor</span>
+    </h1>
+
+    <div class="text-xl md:text-2xl text-cream mb-6">
+  <div class="typewriter">Virtual Assistant & Data Specialist</div>
+</div>
+
+
+    <p class="text-lg text-cream/90 mb-8 max-w-2xl">
+      Transforming businesses through expert virtual assistance, data analysis, and administrative excellence. 2+ years of proven results in healthcare, logistics, and remote operations.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact" class="bg-burnt-orange hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105">
+        Hire Me Now
+      </a>
+      <a href="#portfolio" class="border-2 border-milk text-milk hover:bg-milk hover:text-black px-8 py-3 rounded-full font-semibold transition-all">
+        View Portfolio
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-coffee mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-burnt-orange mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-coffee mb-6">Professional Summary</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        Highly organized and detail-oriented professional with 2+ years of experience in data analysis, 
+                        record management, and executive support. I specialize in extracting insights, automating tasks, 
+                        and supporting data-driven decision-making using advanced tools and AI technologies.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="text-center p-4 bg-milk rounded-lg">
+                            <div class="text-2xl font-bold text-burnt-orange">500+</div>
+                            <div class="text-sm text-coffee">Records Managed Daily</div>
+                        </div>
+                        <div class="text-center p-4 bg-milk rounded-lg">
+                            <div class="text-2xl font-bold text-burnt-orange">99.8%</div>
+                            <div class="text-sm text-coffee">Accuracy Rate</div>
+                        </div>
+                        <div class="text-center p-4 bg-milk rounded-lg">
+                            <div class="text-2xl font-bold text-burnt-orange">40%</div>
+                            <div class="text-sm text-coffee">Efficiency Improvement</div>
+                        </div>
+                        <div class="text-center p-4 bg-milk rounded-lg">
+                            <div class="text-2xl font-bold text-burnt-orange">9K+</div>
+                            <div class="text-sm text-coffee">Data Points Analyzed</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-coffee mb-6">Key Strengths</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-coffee font-medium">Data Analysis & Excel</span>
+                                <span class="text-burnt-orange">95%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-burnt-orange to-warm-brown h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-coffee font-medium">Administrative Support</span>
+                                <span class="text-burnt-orange">98%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-burnt-orange to-warm-brown h-3 rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-coffee font-medium">Project Management</span>
+                                <span class="text-burnt-orange">90%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-burnt-orange to-warm-brown h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-coffee font-medium">AI Tools & Automation</span>
+                                <span class="text-burnt-orange">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-gradient-to-r from-burnt-orange to-warm-brown h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-milk">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-coffee mb-4">My Services</h2>
+                <div class="w-24 h-1 bg-burnt-orange mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive virtual assistance and data solutions tailored to your business needs
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-burnt-orange to-warm-brown rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-coffee mb-4">Data Analysis & Reporting</h3>
+                    <p class="text-gray-600 mb-4">
+                        Advanced Excel, Google Sheets, and Python analysis. Create automated reports, 
+                        visualizations, and insights from your data.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Excel & Google Sheets mastery</li>
+                        <li>• Python data visualization</li>
+                        <li>• Automated reporting systems</li>
+                        <li>• Business intelligence insights</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-burnt-orange to-warm-brown rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user-tie text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-coffee mb-4">Executive Virtual Assistance</h3>
+                    <p class="text-gray-600 mb-4">
+                        Complete administrative support including calendar management, meeting coordination, 
+                        and executive communication.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Calendar & schedule management</li>
+                        <li>• Email management & filtering</li>
+                        <li>• Travel planning & booking</li>
+                        <li>• Meeting coordination & minutes</li>
+                        <li>• Document preparation & formatting</li>
+                        <li>• CRM management (Zoho, HubSpot)</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-burnt-orange to-warm-brown rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-database text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-coffee mb-4">Data Entry & Management</h3>
+                    <p class="text-gray-600 mb-4">
+                        High-accuracy data entry with 99.8% precision. Database management, 
+                        record keeping, and data validation protocols.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• High-volume data entry</li>
+                        <li>• Database management</li>
+                        <li>• Quality assurance protocols</li>
+                        <li>• Data migration services</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-burnt-orange to-warm-brown rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-coffee mb-4">AI Integration & Automation</h3>
+                    <p class="text-gray-600 mb-4">
+                        Leverage AI tools and automation to streamline workflows, reduce manual tasks, 
+                        and improve operational efficiency.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Workflow automation (Zapier)</li>
+                        <li>• AI tools (Copilot, Otter.ai, Claude)</li>
+                        <li>• Task management (Trello, Asana)</li>
+                        <li>• Communication tools (Slack, Teams)</li>
+                        <li>• Time tracking & productivity</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-burnt-orange to-warm-brown rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-project-diagram text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-coffee mb-4">Project Coordination</h3>
+                    <p class="text-gray-600 mb-4">
+                        End-to-end project support using Notion, Slack, and Google Workspace. 
+                        Team collaboration and progress tracking.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Project planning (Notion, Airtable)</li>
+                        <li>• Team coordination (Slack, Teams)</li>
+                        <li>• Progress tracking & reporting</li>
+                        <li>• Resource & timeline management</li>
+                        <li>• Client communication & updates</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-burnt-orange to-warm-brown rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-coffee mb-4">Healthcare Data Specialist</h3>
+                    <p class="text-gray-600 mb-4">
+                        Specialized in healthcare data management with HND in Health Information Management. 
+                        HIPAA-compliant record keeping.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Patient record management</li>
+                        <li>• Healthcare compliance</li>
+                        <li>• Medical data analysis</li>
+                        <li>• Treatment trend reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Project section -->
+<section id="custom-projects-section" class="custom-projects-section py-20 bg-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-coffee mb-4">Featured Work</h2>
+      <div class="w-24 h-1 bg-burnt-orange mx-auto mb-6"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto">Here are a few highlights of my recent projects and achievements.</p>
+    </div>
+
+    <!-- Grid of Projects -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
+
+      <!-- Project Card 1 -->
+      <div class="custom-project-card bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Image Header -->
+        <div class="custom-project-image h-48 w-full">
+          <img src="./image/notion.png" alt="Notion Project" class="w-full h-full object-cover rounded-t-xl" />
+        </div>
+        <!-- Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-coffee mb-2">Notion Workspace</h3>
+          <p class="text-gray-600 mb-4">Built and managed a Notion dashboard for community project tracking, documentation, meeting notes, and team assignments. Reduced confusion and increased team visibility by 80%.</p>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">Community</span>
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">Documentation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="custom-project-card bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="custom-project-image h-48 w-full">
+          <img src="./image/trello.png" alt="Trello Project" class="w-full h-full object-cover rounded-t-xl" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-coffee mb-2">Trello Workspace</h3>
+          <p class="text-gray-600 mb-4">Designed a task pipeline using Trello for pproject tracking and report processing. Automated updates and reminders improved operational workflow by 40%..</p>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">Automation</span>
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">AI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="custom-project-card bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="custom-project-image h-48 w-full">
+          <img src="./image/email.png" alt="Email Project" class="w-full h-full object-cover rounded-t-xl" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-coffee mb-2">Email Management</h3>
+          <p class="text-gray-600 mb-4">Analyzed communication patterns across email, and Google Workspace to improve team responsiveness.</p>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">Communication</span>
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">Google Workspace</span>
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">Email optimization</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div class="custom-project-card bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="custom-project-image h-48 w-full">
+          <img src="./image/calendar.png" alt="Calendar Project" class="w-full h-full object-cover rounded-t-xl" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-coffee mb-2">Calendar Management + Task System</h3>
+          <p class="text-gray-600 mb-4">Created a comprehensive executive support system integrating calendar management, meeting prep documents, and travel planning using Excel and Google Calendar.</p>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">Scheduling</span>
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">Data Tracking</span>
+            <span class="bg-burnt-orange/10 text-burnt-orange px-3 py-1 rounded-full">Executive Support</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    
+        <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-coffee mb-4">Portfolio</h2>
+                <div class="w-24 h-1 bg-burnt-orange mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Real projects and achievements that demonstrate my expertise and impact
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-burnt-orange to-warm-brown flex items-center justify-center">
+                        <i class="fas fa-utensils text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-coffee mb-3">Restaurant Review Analysis</h3>
+                        <p class="text-gray-600 mb-4">
+                            Analyzed 9,000+ restaurant records using Python to identify pricing and rating patterns. 
+                            Created predictive models for customer satisfaction.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Data Analysis</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Visualization</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-building mr-2"></i>Cognifyz Technologies
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-warm-brown to-coffee flex items-center justify-center">
+                        <i class="fas fa-hospital text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-coffee mb-3">Healthcare Data Management</h3>
+                        <p class="text-gray-600 mb-4">
+                            Managed 500+ patient records daily with 99.8% accuracy. Implemented automated 
+                            reporting systems reducing manual effort by 40%.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Excel</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Healthcare</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Automation</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-building mr-2"></i>NAUTH Hospital
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-coffee to-black flex items-center justify-center">
+                        <i class="fas fa-users text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-coffee mb-3">Remote Team Analytics</h3>
+                        <p class="text-gray-600 mb-4">
+                            Analyzed team engagement data across multiple platforms. Created automated 
+                            tracking systems for productivity monitoring.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Team Analytics</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Slack</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Google Sheets</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-building mr-2"></i>ALX Africa
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-burnt-orange to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-truck text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-coffee mb-3">Logistics Data Systems</h3>
+                        <p class="text-gray-600 mb-4">
+                            Managed high-volume customer and shipment data. Implemented quality control 
+                            protocols and delivery tracking systems.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Logistics</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Data Entry</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Quality Control</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-building mr-2"></i>Kendad Transport
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-warm-brown to-burnt-orange flex items-center justify-center">
+                        <i class="fas fa-chart-bar text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-coffee mb-3">Executive Support Systems</h3>
+                        <p class="text-gray-600 mb-4">
+                            Provided comprehensive administrative support to executive teams. Managed 
+                            calendars, communications, and policy documentation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Executive Support</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Policy</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Healthcare</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-building mr-2"></i>Ministry of Health
+                        </div>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-coffee to-warm-brown flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-coffee mb-3">Community Management</h3>
+                        <p class="text-gray-600 mb-4">
+                            Managed 200-member community operations. Coordinated meetings, documentation, 
+                            and provided tutoring support using modern collaboration tools.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Community</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Notion</span>
+                            <span class="px-3 py-1 bg-burnt-orange/10 text-burnt-orange text-xs rounded-full">Tutoring</span>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-building mr-2"></i>BGIT Dublin
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-20 bg-milk">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-coffee mb-4">Certifications & Education</h2>
+                <div class="w-24 h-1 bg-burnt-orange mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-burnt-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-tie text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-coffee mb-2">Virtual Assistant</h3>
+                    <p class="text-sm text-gray-600">ALX Africa, 2024</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-burnt-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-coffee mb-2">Data Science/Analytics</h3>
+                    <p class="text-sm text-gray-600">ALX Africa, 2023-2024</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-burnt-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-robot text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-coffee mb-2">AI Career Essentials</h3>
+                    <p class="text-sm text-gray-600">ALX Africa, 2024</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-burnt-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-brain text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-coffee mb-2">Generative AI</h3>
+                    <p class="text-sm text-gray-600">Microsoft & LinkedIn, 2024</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-burnt-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clipboard-list text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-coffee mb-2">Office Administration</h3>
+                    <p class="text-sm text-gray-600">Institute of Management & Finance, 2024</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-burnt-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heartbeat text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-coffee mb-2">Health Information Management</h3>
+                    <p class="text-sm text-gray-600">HND, 2015-2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-milk mb-4">Let's Work Together</h2>
+                <div class="w-24 h-1 bg-burnt-orange mx-auto mb-6"></div>
+                <p class="text-cream max-w-2xl mx-auto">
+                    Ready to transform your business with expert virtual assistance and data solutions? 
+                    Let's discuss your project today.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-milk mb-6">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-burnt-orange rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-cream font-medium">Email</div>
+                                <a href="mailto:adachukwuokafor25@gmail.com" class="text-milk hover:text-burnt-orange transition-colors">
+                                    adachukwuokafor25@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-burnt-orange rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-cream font-medium">LinkedIn</div>
+                                <a href="https://linkedin.com/in/adachukwu-okafor/" target="_blank" class="text-milk hover:text-burnt-orange transition-colors">
+                                    linkedin.com/in/adachukwu-okafor/
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-burnt-orange rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-whatsapp text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-cream font-medium">WhatsApp</div>
+                                <a href="https://wa.me/+2348165856354" target="_blank" class="text-milk hover:text-burnt-orange transition-colors">
+                                    Chat on WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-burnt-orange rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-cream font-medium">Phone</div>
+                                <a href="tel:+2348165856354" class="text-milk hover:text-burnt-orange transition-colors">
+                                    +234 816 585 6354
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                    <form class="space-y-6" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label class="block text-cream font-medium mb-2">Name</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-milk placeholder-cream/70 focus:outline-none focus:border-burnt-orange" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-cream font-medium mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-milk placeholder-cream/70 focus:outline-none focus:border-burnt-orange" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-cream font-medium mb-2">Project Type</label>
+                            <select class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-red focus:outline-none focus:border-burnt-orange">
+                                <option value="">Select Service</option>
+                                <option value="data-analysis">Data Analysis & Reporting</option>
+                                <option value="virtual-assistant">Virtual Assistant</option>
+                                <option value="data-entry">Data Entry & Management</option>
+                                <option value="ai-automation">AI Integration & Automation</option>
+                                <option value="project-coordination">Project Coordination</option>
+                                <option value="healthcare-data">Healthcare Data Specialist</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-cream font-medium mb-2">Message</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-milk placeholder-cream/70 focus:outline-none focus:border-burnt-orange" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-burnt-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-milk py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-2xl font-bold mb-4">
+                    Adachukwu <span class="text-burnt-orange">Okafor</span>
+                </div>
+                <p class="text-cream/80 mb-6">
+                    Virtual Assistant & Data Specialist - Transforming businesses through expert solutions
+                </p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="mailto:adachukwuokafor25@gmail.com" class="text-cream hover:text-burnt-orange transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/adachukwu-okafor/" target="_blank" class="text-cream hover:text-burnt-orange transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/+2348165856354" target="_blank" class="text-cream hover:text-burnt-orange transition-colors">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="tel:+2348165856354" class="text-cream hover:text-burnt-orange transition-colors">
+                        <i class="fas fa-phone text-xl"></i>
+                    </a>
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-cream/60">
+                        © 2024 Adachukwu Okafor. All rights reserved. | Ready to elevate your business with professional virtual assistance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! I will get back to you within 24 hours to discuss your project.');
+        }
+
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.style.width;
+                    }
+                });
+            });
+
+            skillBars.forEach(bar => {
+                observer.observe(bar);
+            });
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            animateSkillBars();
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-black');
+                nav.classList.remove('bg-black/90');
+            } else {
+                nav.classList.add('bg-black/90');
+                nav.classList.remove('bg-black');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
